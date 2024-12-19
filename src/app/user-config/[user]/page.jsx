@@ -172,7 +172,7 @@ export default function Config() {
           {histories.map((history) => (
             <li key={history._id} className="text-black text-xl p-4 my-4 rounded-lg flex items-center justify-between" style={{ backgroundColor: color }}
             >
-              <h5 onClick={() => router.push(`/make-history/${history._id}`)} className="cursor-pointer bg-white  p-2 rounded-xl font-sm lg:font-normal">Title: {history.title}</h5>
+              <h5 onClick={() => router.push(`/make-history/${history._id}`)} className="cursor-pointer bg-white  p-2 rounded-xl text-sm lg:text-base">Title: {history.title}</h5>
               <div className="flex gap-2 items-center">
               <h6 
               className="bg-white p-2 rounded-xl cursor-pointer font-sm lg:font-normal" 
