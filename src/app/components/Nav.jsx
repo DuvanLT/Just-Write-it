@@ -53,7 +53,7 @@ export default function Nav() {
             )}
             {userInitial ? (
               <li 
-                onClick={() => router.push(`/user-config/${userLogged}`)}
+                onClick={() => {router.push(`/user-config/${userLogged}`); handleClick()}}
                 style={{ backgroundColor: color }}
                 className="py-2 px-4 rounded-full text-white cursor-pointer mr-4 lg:mr-2" 
               >
