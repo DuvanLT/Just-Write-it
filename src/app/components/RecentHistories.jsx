@@ -18,7 +18,7 @@ export default function RecentHistories() {
         
         const fetchHistories = async () => {
             try {
-                const response = await fetch('http://localhost:7000/histories')
+                const response = await fetch('https://just-write-it.onrender.com/histories')
                 const data = await response.json()
 
                 setHistories(data)

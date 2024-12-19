@@ -13,7 +13,7 @@ export default function Login() {
         e.preventDefault()
 
         try {
-            const response = await fetch('http://localhost:7000/signin',{
+            const response = await fetch('https://just-write-it.onrender.com/signin',{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

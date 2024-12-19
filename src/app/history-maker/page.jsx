@@ -20,7 +20,7 @@ export default function HistoryMaker() {
         }
     
         try {
-            const response = await fetch('http://localhost:7000/protected', {
+            const response = await fetch('https://just-write-it.onrender.com/protected', {
                 method: 'GET',
                 headers: { Authorization: `Bearer ${token}` },
             });
@@ -31,7 +31,7 @@ export default function HistoryMaker() {
                 router.push('/')
                 return;
             }
-                const submitResponse = await fetch('http://localhost:7000/history', {
+                const submitResponse = await fetch('https://just-write-it.onrender.com/history', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -8,7 +8,7 @@ export default function HistoriesPublished() {
     useEffect(() => {
         const fetchHistories = async () => {
             try {
-                const response = await fetch('http://localhost:7000/histories-published')
+                const response = await fetch('https://just-write-it.onrender.com/histories-published')
                 const data = await response.json()
 
                 if (response.ok) {

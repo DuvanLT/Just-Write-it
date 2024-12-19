@@ -20,7 +20,7 @@ export default function Config() {
     }
   
     try {
-      const response = await fetch(`http://localhost:7000/delete-history/${id}`, {
+      const response = await fetch(`https://just-write-it.onrender.com/delete-history/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ export default function Config() {
     }
   
     try {
-      const response = await fetch(`http://localhost:7000/delete-account/${userId}`, {
+      const response = await fetch(`https://just-write-it.onrender.com/delete-account/${userId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ export default function Config() {
 
     try {
       
-      const response = await fetch(`http://localhost:7000/history/${id}/change-status`, {
+      const response = await fetch(`https://just-write-it.onrender.com/history/${id}/change-status`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ export default function Config() {
           return;
         }
   
-        const response = await fetch(`http://localhost:7000/myhistories/${user}`, {
+        const response = await fetch(`https://just-write-it.onrender.com/myhistories/${user}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

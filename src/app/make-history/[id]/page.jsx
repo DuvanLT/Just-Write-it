@@ -13,7 +13,7 @@ export default function MakeHistory() {
   const fetchHistory = async () => {
     if (id) {
       try {
-        const response = await fetch(`http://localhost:7000/history/${id}`)
+        const response = await fetch(`https://just-write-it.onrender.com/history/${id}`)
         const data = await response.json()
 
         if (response.ok) {
@@ -56,7 +56,7 @@ export default function MakeHistory() {
     }
 
     try {
-      const response = await fetch(`http://localhost:7000/history/${id}/add-content`, {
+      const response = await fetch(`https://just-write-it.onrender.com/history/${id}/add-content`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

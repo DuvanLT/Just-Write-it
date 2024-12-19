@@ -12,7 +12,7 @@ export default function Signup() {
         e.preventDefault()
 
         try {
-            const response = await fetch('http://localhost:7000/signup', {
+            const response = await fetch('https://just-write-it.onrender.com/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
