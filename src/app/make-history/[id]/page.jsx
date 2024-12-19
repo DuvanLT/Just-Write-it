@@ -9,6 +9,7 @@ export default function MakeHistory() {
   const { id } = useParams()
   const [title, setTitle] = useState('')
   const [text, setText] = useState('')
+  const [isDisabled, setIsDisabled] = useState(false)
 
   const fetchHistory = async () => {
     if (id) {
@@ -64,7 +65,7 @@ export default function MakeHistory() {
         },
         body: JSON.stringify({ text, title }),
       })
-
+      setIsDisabled(true)
       const data = await response.json()
 
       if (response.ok) {
@@ -73,7 +74,7 @@ export default function MakeHistory() {
         setHistory((prev) => {
           const updatedContent = [...prev.content, { text, author: prev.author }] // Agregamos el nuevo contenido al array
           const updatedText = updatedContent.map((item) => item.text).join('\n\n') // Volver a crear el texto combinado
-
+          setIsDisabled(false)
           return {
             ...prev,
             content: updatedContent, // Actualizamos el contenido
@@ -134,7 +135,7 @@ export default function MakeHistory() {
           ></textarea>
         </div>
 
-        <button type="submit" className="bg-orange-500 px-12 py-3 font-sans text-white mb-20">
+        <button type="submit" disabled={isDisabled} className="bg-orange-500 px-12 py-3 font-sans text-white mb-20">
           Agregar Contenido
         </button>
       </form>
