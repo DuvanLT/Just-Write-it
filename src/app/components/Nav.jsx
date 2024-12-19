@@ -28,7 +28,7 @@ export default function Nav() {
       <header className="flex justify-between h-24 items-center z-40 bg-white border-b">
         <nav className="flex md:justify-between max-w-[1250px] m-auto w-screen items-center">
           <div className="text-black text-lg md:text-xl font-semibold italic z-50 flex items-center ml-4 lg:ml-0">
-            <Link href="/" onClick={handleClick} className="z-50">Just Write It </Link>
+            <Link href="/" className="z-50">Just Write It </Link>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><g fill="none" stroke="#ea580c" strokeLinejoin="round" strokeWidth="4"><path d="M5.325 43.5h8.485l31.113-31.113l-8.486-8.485L5.325 35.015z"/><path strokeLinecap="round" d="m27.952 12.387l8.485 8.485"/></g></svg>
           </div>
           <ul className={`flex flex-col justify-center items-center absolute bg-white w-screen h-screen z-50 gap-4 text-xl md:text-lg transition-all duration-300 md:flex-row md:relative md:w-fit md:h-fit ${nav ? "closeNav" : "openNav"}`}>
