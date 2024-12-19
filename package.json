@@ -1,16 +1,20 @@
 {
   "name": "history_client",
   "version": "0.1.0",
+  "main": "index.js",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "node server/index.js",
+    "frontend": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "concurrently": "^9.1.0",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^4.0.0",
     "next": "15.1.0",
