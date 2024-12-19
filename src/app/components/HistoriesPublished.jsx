@@ -29,6 +29,7 @@ export default function HistoriesPublished() {
 
     return (
         <div className='flex justify-center items-center flex-col bg-white p-4 mt-2'>
+            <h2 className='font-extralight text-xl lg:text-3xl'>Histories to contribute</h2>
             <RecentHistories />
              <div className='max-w-[1250px] m-auto'>
             {histories.map(h => (
