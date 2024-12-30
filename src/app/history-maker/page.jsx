@@ -83,7 +83,7 @@ export default function HistoryMaker() {
                         name="text"
                         id="text"
                         value={text}
-                        maxLength={300}
+                        maxLength={200}
                         onChange={(e) => setText(e.target.value)}
                         className="border-solid border-black border w-full p-2.5 min-h-48"
                         placeholder="Había una vez..."
